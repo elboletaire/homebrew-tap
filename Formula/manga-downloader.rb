@@ -1,7 +1,7 @@
 class MangaDownloader < Formula
   desc "Download manga chapters from supported sites into CBZ files"
   homepage "https://elboletaire.github.io/manga-downloader/"
-  version "1.11.1"
+  version "1.13.0"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -12,22 +12,22 @@ class MangaDownloader < Formula
   on_macos do
     on_arm do
       url "https://github.com/elboletaire/manga-downloader/releases/download/v#{version}/manga-downloader-v#{version}-darwin-arm64.tar.gz"
-      sha256 "08dfc0ec75bcb2e6de67f75d0a0cc7ede4a2c1266146fbe34e04c941d94f128d"
+      sha256 "693cc5d5091354b1bf56f1436ae6abe7eb5a38ed71fa1eaa3ebe855e69620380"
     end
     on_intel do
       url "https://github.com/elboletaire/manga-downloader/releases/download/v#{version}/manga-downloader-v#{version}-darwin-amd64.tar.gz"
-      sha256 "1af333016f968d8b858075d6d3d2fdb313e431123a3d5b79643a70664fbf6e76"
+      sha256 "1cffec88564c07424419fa4472fff3b51cb19de1434c48c241c4fe980e10efe7"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/elboletaire/manga-downloader/releases/download/v#{version}/manga-downloader-v#{version}-linux-arm64.tar.gz"
-      sha256 "ffee16f342898bdb25bfc9c7ba31654d66716d8ed35c136c76525fd4d0aa180b"
+      sha256 "fc9c94ed563369608b604a78a1accdeb585286d0bb3978d5e8644380a53944f0"
     end
     on_intel do
       url "https://github.com/elboletaire/manga-downloader/releases/download/v#{version}/manga-downloader-v#{version}-linux-amd64.tar.gz"
-      sha256 "1aa3a781be61a1883c007f9a322dcbf42edb94229ccde2b938456abe1111c3d2"
+      sha256 "403bebcaeadd02f86ea44d94a344d435639b3bea8f3e03e55c3491e73e834964"
     end
   end
 
