@@ -1,10 +1,10 @@
 cask "manga-downloader" do
-  version "1.15.1"
-  sha256 "8b5b67020b0fe00a3a7e646d7d8db79592cd320ca65fb0ba62a5dbc0d1595ea9"
+  version "1.16.0"
+  sha256 "aab1a8a06a7fbccc848fdc8dc454a50a9e00910a2697d18413715542fdb58599"
 
   url "https://github.com/elboletaire/manga-downloader/releases/download/v#{version}/manga-downloader-gui-v#{version}-darwin-universal.zip"
   name "Manga Downloader"
-  desc "Download manga chapters to CBZ files"
+  desc "Download manga chapters to CBZ or EPUB files"
   homepage "https://mangadownloader.cat/"
 
   livecheck do
@@ -12,9 +12,14 @@ cask "manga-downloader" do
     strategy :github_latest
   end
 
-  # The app and the command line tool go together: `manga-downloader ui` is the
-  # CLI's, and the formula shares this cask's name, so it's easy to miss.
-  depends_on formula: "elboletaire/tap/manga-downloader"
+  # The old name of manga-downloader-app, kept so that installs of it hear about
+  # the rename. Delete it after a few releases.
+  deprecate! date:             "2026-10-14",
+             because:          "is now called manga-downloader-app",
+             replacement_cask: "manga-downloader-app"
+
+  conflicts_with cask: "elboletaire/tap/manga-downloader-app"
+  depends_on :macos
 
   app "Manga Downloader.app"
   # `manga-downloader ui` looks for manga-downloader-gui next to the CLI or on
@@ -33,6 +38,9 @@ cask "manga-downloader" do
   ]
 
   caveats <<~EOS
+    This cask is now called manga-downloader-app. To switch, run:
+      brew uninstall --cask manga-downloader && brew install --cask elboletaire/tap/manga-downloader-app
+
     Manga Downloader is not notarized yet, so macOS blocks it the first time it opens.
     Go to System Settings > Privacy & Security and click "Open Anyway".
   EOS
