@@ -1,10 +1,10 @@
 cask "manga-downloader-app" do
-  version "1.19.1"
-  sha256 "20c510891a37de15cacbfd35a1076c799b26c48944623aa24970f12c64676d32"
+  version "1.20.0"
+  sha256 "0fa082c3d37c2f6dbaea29df4ae911b21ad067e2ea00ccd6eacb12eb26545f36"
 
   url "https://github.com/elboletaire/manga-downloader/releases/download/v#{version}/manga-downloader-gui-v#{version}-darwin-universal.zip"
   name "Manga Downloader"
-  desc "Download manga chapters to CBZ or EPUB files"
+  desc "Download manga chapters to CBZ, CBR or EPUB files"
   homepage "https://mangadownloader.cat/"
 
   livecheck do
