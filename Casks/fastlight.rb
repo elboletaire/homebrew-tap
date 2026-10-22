@@ -1,6 +1,6 @@
 cask "fastlight" do
-  version "0.5.3"
-  sha256 "009e2709b8e165ff31fb4dabb3bb7f0fe58f8d72a8a01112cb6dd5c1eb002ded"
+  version "0.5.4"
+  sha256 "f65202193129c36fdfe34f544a7155a312fdf95ac67624dfb903b584bd4fc438"
 
   url "https://github.com/elboletaire/fastlight/releases/download/v#{version}/Fastlight-#{version}.dmg"
   name "Fastlight"
