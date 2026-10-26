@@ -1,6 +1,6 @@
 cask "manga-downloader-app" do
-  version "23.0.0"
-  sha256 "1ff518e604ca42400cd8372cf7d9df089362987413a0e0601a69236146beabda"
+  version "23.0.1"
+  sha256 "5655d6756283d6d92efac57a4f9049e5790c686cb65df53efaf6f1c4600c4468"
 
   url "https://github.com/elboletaire/manga-downloader/releases/download/v#{version}/manga-downloader-gui-v#{version}-darwin-universal.zip"
   name "Manga Downloader"
